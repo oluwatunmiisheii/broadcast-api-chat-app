@@ -1,8 +1,8 @@
 # **BroadcastChat**
 
-BroadcastChat is a real-time chat application built using React and the Broadcast Channel API. This application demonstrates how to synchronize chat messages and participants across multiple browser tabs using the Broadcast Channel API. Each user can enter their name upon joining, and their messages are broadcasted to all other open tabs. The app also updates the list of active participants in real-time.
+BroadcastChat is a real-time chat app built with Next.js and the Broadcast Channel API. It shows how to use the Broadcast Channel API to enable communication between multiple browser tabs. Users enter their name, send messages, and see updates in real-time across all open tabs. The app also tracks and displays active participants.
 
-This project is styled with [shadcn UI](https://ui.shadcn.dev/) and Tailwind CSS, providing a modern and clean user interface.
+For more details on using the Broadcast Channel API, check out my article: [Exploring the Broadcast Channel API for Real-Time Tab Communication](#).
 
 ## **Features**
 
