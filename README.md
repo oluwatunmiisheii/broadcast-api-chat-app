@@ -1,4 +1,4 @@
-# **BroadcastChat**
+# **Broadcast Chat**
 
 BroadcastChat is a real-time chat app built with Next.js and the Broadcast Channel API. It shows how to use the Broadcast Channel API to enable communication between multiple browser tabs. Users enter their name, send messages, and see updates in real-time across all open tabs. The app also tracks and displays active participants.
 
