@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **BroadcastChat**
 
-## Getting Started
+BroadcastChat is a real-time chat application built using React and the Broadcast Channel API. This application demonstrates how to synchronize chat messages and participants across multiple browser tabs using the Broadcast Channel API. Each user can enter their name upon joining, and their messages are broadcasted to all other open tabs. The app also updates the list of active participants in real-time.
 
-First, run the development server:
+This project is styled with [shadcn UI](https://ui.shadcn.dev/) and Tailwind CSS, providing a modern and clean user interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Features**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Real-Time Chat:** Messages are instantly shared across all open tabs.
+- **Dynamic Participants List:** See a list of participants, updated in real-time as new users join the chat.
+- **Custom Chat Bubbles:** Messages are displayed in styled chat bubbles, with distinct colors for messages sent by the current user.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Getting Started**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### **Prerequisites**
 
-## Learn More
+- **Node.js**: Make sure you have Node.js installed. You can download it from [here](https://nodejs.org/).
+- **npm**: Node Package Manager is typically installed with Node.js.
 
-To learn more about Next.js, take a look at the following resources:
+### **Installation**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/oluwatunmiisheii/broadcast-api-chat-app.git
+   ```
 
-## Deploy on Vercel
+2. **Navigate to the project directory:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   cd broadcast-api-chat-app
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Install Dependencies:**
+
+   ```bash
+   bun install
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   bun dev
+   ```
+
+## **Usage**
+
+- Open the application in multiple browser tabs.
+- Enter your name in each tab.
+- Send messages and watch them appear in real-time across all open tabs.
+- View the list of participants, which updates as new users join.
+
+## **Reference**
+
+This project is used to demonstrate the capabilities of the Broadcast Channel API in my article: [Exploring the Broadcast Channel API for Real-Time Tab Communication](#). The article provides a detailed explanation of the API and how it can be used to build features like the one demonstrated in this application.
+
+## **Technologies Used**
+
+- **React**: JavaScript library for building user interfaces.
+- **Broadcast Channel API**: A simple API for communicating between different browser contexts (tabs, windows, iframes) of the same origin.
+- **shadcn UI**: A UI component library built on top of Tailwind CSS.
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs without writing any custom CSS.
+
+## **Contributing**
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue to discuss any changes.
+
+## **License**
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
