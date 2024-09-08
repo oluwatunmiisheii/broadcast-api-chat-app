@@ -6,6 +6,7 @@ import NamePrompt from './_components/name-prompt'
 import ChatBox from './_components/chat-box'
 import MessageInput from './_components/message-form'
 import ParticipantsList from './_components/participants-list'
+import { Show } from 'react-smart-conditional'
 
 const CHANNEL_NAME = 'chat-channel'
 
@@ -70,25 +71,27 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 h-screen bg-gray-100">
-      {showNamePrompt ? (
+    <Show
+      as="main"
+      className="flex min-h-screen flex-col items-center justify-between p-24 h-screen bg-gray-100"
+    >
+      <Show.If condition={showNamePrompt} as={Card} className="p-8 max-w-sm w-full">
         <NamePrompt name={name} setName={setName} handleNameSubmit={handleNameSubmit} />
-      ) : (
-        <Card className="flex flex-col p-0 h-full max-w-xl w-full">
-          <div className="border-b border-gray-200 p-4">
-            <h2 className="text-xl font-semibold">Chat Application</h2>
-            <ParticipantsList participants={participants} currentUserName={name} />
-          </div>
-          <div className="flex-1 overflow-hidden flex flex-col">
-            <ChatBox messages={messages} currentUserName={name} />
-            <MessageInput
-              message={message}
-              setMessage={setMessage}
-              handleSendMessage={handleSendMessage}
-            />
-          </div>
-        </Card>
-      )}
-    </main>
+      </Show.If>
+      <Show.Else as={Card} className="flex flex-col p-0 h-full max-w-xl w-full">
+        <div className="border-b border-gray-200 p-4">
+          <h2 className="text-xl font-semibold">Chat Application</h2>
+          <ParticipantsList participants={participants} currentUserName={name} />
+        </div>
+        <div className="flex-1 overflow-hidden flex flex-col">
+          <ChatBox messages={messages} currentUserName={name} />
+          <MessageInput
+            message={message}
+            setMessage={setMessage}
+            handleSendMessage={handleSendMessage}
+          />
+        </div>
+      </Show.Else>
+    </Show>
   )
 }
